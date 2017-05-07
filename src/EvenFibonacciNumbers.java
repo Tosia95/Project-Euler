@@ -7,7 +7,7 @@ public class EvenFibonacciNumbers {
 	static int sum = 0;
 	static int[] fbn = new int[50];
 	
-	//suma parzystych wartosci ci�gu Fibonacciego mniejszych od 4 000 000
+	//suma parzystych wartosci ci¹gu Fibonacciego mniejszych od 4 000 000
 	public static int getFibonacci() {
 
 			int i = 0;
@@ -41,7 +41,8 @@ public class EvenFibonacciNumbers {
 				sum = sum + fbn[x];
 				
 			}
-			sum = sum + 2;
+			sum = sum + 2; // pierwszym elementem tablicy jest 3 element ciągu, 
+			//wiec nalezy dodac 2 element ciagu, ktory jest parzysty
 			return sum;
 
 		}
