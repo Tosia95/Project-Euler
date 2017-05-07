@@ -5,8 +5,9 @@ public class EvenFibonacciNumbers {
 	static int c = 0;
 	static int s = 3524577;
 	static int sum = 0;
-	static int[] fbn = new int[1000];
+	static int[] fbn = new int[50];
 	
+	//suma parzystych wartosci ci¹gu Fibonacciego mniejszych od 4 000 000
 	public static int getFibonacci() {
 
 			int i = 0;
@@ -16,15 +17,21 @@ public class EvenFibonacciNumbers {
 				
 				if (a < b && a < c) { 
 					a = b + c;
+					if(a%2==0){
 					fbn[i] = a;
+					}
 				}
 				else if (b < a && b < c) {
-					b = a + c;
-					fbn[i] = b;
+					b = c + a;
+					if(b%2==0){
+						fbn[i] = b;
+						}
 				}
 				else if (c < a && c < b) {
 					c = a + b;
-					fbn[i] = c;
+					if(c%2==0){
+						fbn[i] = c;
+						}
 				}
 				if (a > s || b > s || c > s) p = true;
 				i++;
@@ -32,8 +39,9 @@ public class EvenFibonacciNumbers {
 			
 			for (int x = 0; x <= i; x++) {
 				sum = sum + fbn[x];
+				
 			}
-			
+			sum = sum + 2;
 			return sum;
 
 		}
